@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#581c87"/>
+  <rect x="40" y="40" width="150" height="80" rx="8" fill="#a855f7"/>
+  <rect x="210" y="40" width="150" height="80" rx="8" fill="#a855f7"/>
+  <circle cx="70" cy="70" r="15" fill="#22c55e"/>
+  <circle cx="240" cy="70" r="15" fill="#22c55e"/>
+  <rect x="95" y="60" width="80" height="8" rx="4" fill="#c4b5fd"/>
+  <rect x="265" y="60" width="80" height="8" rx="4" fill="#c4b5fd"/>
+  <rect x="95" y="75" width="60" height="8" rx="4" fill="#c4b5fd"/>
+  <rect x="265" y="75" width="60" height="8" rx="4" fill="#c4b5fd"/>
+  <rect x="40" y="140" width="320" height="30" rx="6" fill="#7c3aed"/>
+  <rect x="50" y="150" width="200" height="10" rx="5" fill="#a78bfa"/>
+  <text x="200" y="220" text-anchor="middle" fill="#ddd6fe" font-family="Arial" font-size="14">Data Quality Monitor</text>
+</svg>

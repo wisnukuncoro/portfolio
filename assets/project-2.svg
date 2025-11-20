@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#0f766e"/>
+  <circle cx="80" cy="80" r="30" fill="#14b8a6"/>
+  <circle cx="200" cy="80" r="30" fill="#14b8a6"/>
+  <circle cx="320" cy="80" r="30" fill="#14b8a6"/>
+  <line x1="110" y1="80" x2="170" y2="80" stroke="#5eead4" stroke-width="3"/>
+  <line x1="230" y1="80" x2="290" y2="80" stroke="#5eead4" stroke-width="3"/>
+  <rect x="50" y="140" width="300" height="10" rx="5" fill="#2dd4bf"/>
+  <rect x="50" y="160" width="250" height="10" rx="5" fill="#2dd4bf"/>
+  <rect x="50" y="180" width="200" height="10" rx="5" fill="#2dd4bf"/>
+  <text x="200" y="220" text-anchor="middle" fill="#99f6e4" font-family="Arial" font-size="14">ETL Pipeline</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#991b1b"/>
+  <polyline points="40,150 80,120 120,140 160,80 200,100 240,60 280,90 320,50 360,70" fill="none" stroke="#fca5a5" stroke-width="3"/>
+  <polyline points="40,170 80,160 120,165 160,140 200,150 240,130 280,145 320,120 360,135" fill="none" stroke="#f87171" stroke-width="2"/>
+  <circle cx="160" cy="80" r="6" fill="#fef2f2"/>
+  <circle cx="240" cy="60" r="6" fill="#fef2f2"/>
+  <circle cx="320" cy="50" r="6" fill="#fef2f2"/>
+  <rect x="40" y="190" width="120" height="20" rx="4" fill="#dc2626"/>
+  <rect x="180" y="190" width="80" height="20" rx="4" fill="#ef4444"/>
+  <rect x="280" y="190" width="80" height="20" rx="4" fill="#dc2626"/>
+  <text x="200" y="235" text-anchor="middle" fill="#fecaca" font-family="Arial" font-size="14">Market Trend Analyzer</text>
+</svg>
