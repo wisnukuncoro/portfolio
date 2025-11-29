@@ -97,3 +97,72 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
     }
 });
 
+// Scroll Reveal Animation
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+const scrollObserver = new IntersectionObserver(observerCallback, observerOptions);
+
+// Observe sections for animation
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    scrollObserver.observe(section);
+});
+
+// Observe skill categories
+document.querySelectorAll('.skill-category').forEach((category, index) => {
+    category.style.opacity = '0';
+    category.style.animationDelay = `${index * 0.1}s`;
+    scrollObserver.observe(category);
+});
+
+// Observe project cards
+document.querySelectorAll('.project-card').forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.animationDelay = `${index * 0.1}s`;
+    scrollObserver.observe(card);
+});
+
+// Observe stat items
+document.querySelectorAll('.stat-item').forEach((stat, index) => {
+    stat.style.opacity = '0';
+    stat.style.animationDelay = `${index * 0.15}s`;
+    scrollObserver.observe(stat);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Typing effect for hero (optional enhancement)
+const heroTitle = document.querySelector('.hero-title');
+if (heroTitle) {
+    heroTitle.style.opacity = '1';
+}
+
