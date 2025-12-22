@@ -39,6 +39,31 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.marquee-wrapper {
+    width: 100%;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
+}
+
+.marquee {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 18s linear infinite;
+    font-size: 1.1rem;
+    color: var(--accent);
+    padding: 0.5rem 0;
+    gap: 1rem;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -227,31 +252,38 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 60px;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.3rem;
 }
 
 .hero-image {
     width: 150px;
     height: 150px;
+    min-width: 150px;
+    min-height: 150px;
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--accent);
     margin-bottom: 1rem;
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
     animation: float 3s ease-in-out infinite;
+    flex-shrink: 0;
+    background: var(--bg-secondary);
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 50%;
 }
 
 .hero h1 {
@@ -350,13 +382,18 @@ img {
 
 .about {
     background: var(--bg-secondary);
+    padding: 5rem 2rem;
+    margin: 0 1.5rem;
+    border-radius: 24px;
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
-    align-items: start;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .about-text p {
@@ -371,16 +408,19 @@ img {
 
 .about-stats {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .stat-item {
     background: var(--card-bg);
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
     border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
+    min-width: 160px;
 }
 
 .stat-number {
@@ -441,6 +481,9 @@ img {
 /* Projects Section */
 .projects {
     background: var(--bg-secondary);
+    padding: 5rem 2rem;
+    margin: 0 1.5rem;
+    border-radius: 24px;
 }
 
 .project-filters {
@@ -681,19 +724,9 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-stats {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
     .stat-item {
-        flex: 1;
         min-width: 140px;
+        padding: 1.25rem 2rem;
     }
 }
 
@@ -797,6 +830,13 @@ img {
         padding: 3.5rem 0;
     }
     
+    .about,
+    .projects {
+        margin: 0 0.75rem;
+        padding: 3rem 1rem;
+        border-radius: 16px;
+    }
+    
     .hero {
         padding-top: 90px;
     }
@@ -812,10 +852,12 @@ img {
     
     .about-stats {
         flex-direction: column;
+        align-items: center;
     }
     
     .stat-item {
         width: 100%;
+        max-width: 280px;
     }
     
     .skill-category {
