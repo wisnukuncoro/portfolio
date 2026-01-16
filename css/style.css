@@ -18,7 +18,7 @@
     --gradient-start: #fefeff;
     --gradient-mid: #f1f2fa;
     --gradient-end: #f3f3ff;
-    --gradient-accent: rgba(167, 139, 250, 0.1);
+    --gradient-accent: rgba(139, 204, 250, 0.1);
 }
 
 [data-theme="dark"] {
@@ -45,6 +45,7 @@ body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+    background-attachment: fixed;
     color: var(--text-primary);
     transition: background 0.3s ease, color 0.3s ease;
     min-height: 100vh;
@@ -747,6 +748,10 @@ img {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .body {
+            background-attachment: fixed;
+        }
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -758,6 +763,10 @@ img {
 }
 
 @media (max-width: 768px) {
+    .body {
+        background-attachment: fixed;
+    }
+
     .nav-links {
         position: fixed;
         top: 70px;
@@ -849,6 +858,10 @@ img {
 }
 
 @media (max-width: 480px) {
+    .body {
+        background-attachment: fixed;
+    }
+    
     .container {
         padding: 0 1rem;
     }
