@@ -165,4 +165,3 @@ const heroTitle = document.querySelector('.hero-title');
 if (heroTitle) {
     heroTitle.style.opacity = '1';
 }
-
