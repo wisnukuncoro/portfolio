@@ -21,7 +21,7 @@
     --gradient-accent: rgba(139, 204, 250, 0.1);
 }
 
-[data-theme="dark"] {
+:root[data-theme="dark"] {
     --bg-primary: #111114;
     --bg-secondary: #1b1b20;
     --text-primary: #f1f5f9;
@@ -44,10 +44,10 @@ html {
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
-    background-attachment: fixed;
+    background-color: var(--bg-primary);
+    background-image: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
     color: var(--text-primary);
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: color 0.3s ease;
     min-height: 100vh;
     position: relative;
 }
@@ -279,7 +279,7 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 110px;
 }
 
 .hero-content {
@@ -872,10 +872,6 @@ img {
 }
 
 @media (max-width: 480px) {
-    .body {
-        background-attachment: fixed;
-    }
-    
     .container {
         padding: 0 1rem;
     }

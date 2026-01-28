@@ -85,8 +85,9 @@ applyTheme(getPreferredTheme());
 // Toggle theme on button click
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-        const currentTheme = html.hasAttribute('data-theme') ? 'light' : 'dark';
-        applyTheme(currentTheme);
+        const currentTheme = html.hasAttribute('data-theme') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
     });
 }
 
